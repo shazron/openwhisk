@@ -40,6 +40,12 @@ dependencies {
         exclude group: 'com.microsoft.azure', module:'azure-cosmosdb'
     }
     implementation "com.microsoft.azure:azure-cosmos:3.7.6"
+    constraints {
+        implementation("io.micrometer:micrometer-core:1.17.0") {
+            because "cannot upgrade azure-cosmos to new major version to remediate vulns w/o breaking change"
+        }
+    }
+
     implementation "org.apache.pekko:pekko-connectors-kafka_${gradle.scala.depVersion}:${gradle.pekko_kafka.version}"
 }
 

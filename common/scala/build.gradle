@@ -109,7 +109,7 @@ dependencies {
         exclude group: 'com.fasterxml.jackson.core'
         exclude group: 'com.fasterxml.jackson.dataformat'
     }
-    api "software.amazon.awssdk:cloudfront:2.46.17" // Upgraded to remove ion-java dependency (CVE-2024-21634)
+    api "software.amazon.awssdk:cloudfront:2.54.2" // Upgraded to remove ion-java dependency (CVE-2024-21634)
 
     api ("com.azure:azure-storage-blob:12.18.0") {
         exclude group: "com.azure", module: "azure-core-test"
@@ -148,6 +148,7 @@ dependencies {
     api "io.netty:netty-codec-socks:${gradle.netty.version}"
     api "io.netty:netty-codec-http:${gradle.netty.version}"
     api "io.netty:netty-codec-http2:${gradle.netty.version}"
+    api "io.netty:netty-codec-http3:${gradle.netty.version}"
     api "io.netty:netty-transport-native-epoll:${gradle.netty.version}"
     api "io.netty:netty-transport-native-unix-common:${gradle.netty.version}"
 
